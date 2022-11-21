@@ -10,9 +10,18 @@ private PDO $bdd;
     {
         $this->bdd = $bdd;
     }
-public function GetAll(){
+    public function getAll(): ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM Etudiant');
 
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $resultSet[] = new \DTO\etudiant($row);
 
-}
-
+            }
+        }
+        return $resultSet;
+    }
 }

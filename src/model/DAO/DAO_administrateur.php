@@ -11,9 +11,19 @@ class DAO_administrateur
     {
         $this->bdd = $bdd;
     }
-    public function GetAll(){
 
+    public function getAll(): ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM administrateur');
 
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $resultSet[] = new \DTO\administrateur($row);
+
+            }
+        }
+        return $resultSet;
     }
-
 }

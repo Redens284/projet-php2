@@ -2,7 +2,7 @@
 
 class DAO_bilan
 {
-private PDO $bdd;
+    private PDO $bdd;
 
     /**
      * @param PDO $bdd
@@ -12,8 +12,18 @@ private PDO $bdd;
         $this->bdd = $bdd;
     }
 
-    public function GetAll(){
+    public function getAll(): ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM bilan');
 
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $resultSet[] = new \DTO\bilan($row);
 
+            }
+        }
+        return $resultSet;
     }
 }

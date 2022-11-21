@@ -12,8 +12,18 @@ private PDO $bdd;
         $this->bdd = $bdd;
     }
 
-    public function GetAll(){
+    public function getAll(): ?array
+    {
+        $resultSet = NULL;
+        $req = $this->bdd->query('SELECT * FROM utilisateur');
 
+        if ($req) {
+            $req->setFetchMode(\PDO::FETCH_ASSOC);
+            foreach ($req as $row) {
+                $resultSet[] = new \DTO\utilisateur($row);
 
+            }
+        }
+        return $resultSet;
     }
 }

@@ -1,7 +1,7 @@
 <?php
-namespace Entities;
+namespace DTO;
 
-class Entreprise
+class entreprise
 {
 
     private $id_ent;

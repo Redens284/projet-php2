@@ -1,7 +1,7 @@
 <?php
-namespace Entities;
+namespace DTO;
 
-class Bilan{
+class bilan{
 
     private $id_note;
     private $remarque;

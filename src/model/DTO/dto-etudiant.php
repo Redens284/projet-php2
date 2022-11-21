@@ -1,7 +1,7 @@
 <?php
-namespace Entities;
+namespace DTO;
 
-class Etudiant extends Utilisateur
+class etudiant extends utilisateur
 {
 
     private  $classe_etu;

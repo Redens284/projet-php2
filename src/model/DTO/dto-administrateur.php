@@ -1,6 +1,6 @@
 <?php
 namespace DTO;
-class administrateur extends utilisateur
+class administrateur
 {
 private int $id_uti;
 private string $nom_uti;

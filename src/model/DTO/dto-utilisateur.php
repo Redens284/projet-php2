@@ -1,7 +1,7 @@
 <?php
-namespace Entities;
+namespace DTO;
 
-class Utilisateur
+class utilisateur
 {
 
     protected  $id_int;
