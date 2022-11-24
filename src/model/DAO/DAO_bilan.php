@@ -15,12 +15,12 @@ class DAO_bilan
     public function getAll(): ?array
     {
         $resultSet = NULL;
-        $req = $this->bdd->query('SELECT * FROM bilan');
+        $req = $this->bdd->query('SELECT * FROM Bilan');
 
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
             foreach ($req as $row) {
-                $resultSet[] = new \DTO\bilan($row);
+                $resultSet[] = new \DTO\Bilan($row);
 
             }
         }

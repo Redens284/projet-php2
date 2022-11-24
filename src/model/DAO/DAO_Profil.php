@@ -1,8 +1,8 @@
 <?php
 
-class DAO_administrateur
+class DAO_Profil
 {
-    private PDO $bdd;
+private PDO $bdd;
 
     /**
      * @param PDO $bdd
@@ -15,12 +15,12 @@ class DAO_administrateur
     public function getAll(): ?array
     {
         $resultSet = NULL;
-        $req = $this->bdd->query('SELECT * FROM administrateur');
+        $req = $this->bdd->query('SELECT * FROM Profil');
 
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
             foreach ($req as $row) {
-                $resultSet[] = new \DTO\administrateur($row);
+                $resultSet[] = new \DTO\Profil($row);
 
             }
         }

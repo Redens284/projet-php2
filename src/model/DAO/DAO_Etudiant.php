@@ -18,7 +18,7 @@ private PDO $bdd;
         if ($req) {
             $req->setFetchMode(\PDO::FETCH_ASSOC);
             foreach ($req as $row) {
-                $resultSet[] = new \DTO\etudiant($row);
+                $resultSet[] = new \DTO\Etudiant($row);
 
             }
         }
