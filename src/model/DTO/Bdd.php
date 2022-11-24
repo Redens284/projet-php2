@@ -4,7 +4,7 @@ namespace DTO;
 
 use PDO;
 
-class bdd
+class Bdd
 {
     private PDO $pdo;
 
