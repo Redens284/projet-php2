@@ -1,0 +1,40 @@
+#table1{
+    border : 2px solid #00BFFF;
+    position: relative;
+    top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    caption-side : bottom;
+}
+
+td, tr, th{
+    border : 2px solid #00BFFF;
+    width:100px;
+}
+#colonneLargeur2{
+    border : 2px solid #00BFFF;
+    width:300px;
+}
+#colonneLargeur3{
+    border : 2px solid #00BFFF;
+    width:200px;
+}
+#table2{
+    border : 2px solid #00BFFF;
+    position: relative;
+    top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    caption-side : bottom;
+    text-align: center;
+}
+
+#table3{
+    border : 2px solid #00BFFF;
+    position: relative;
+    top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    caption-side : bottom;
+    text-align: center;
+}

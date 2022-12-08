@@ -33,7 +33,7 @@ if($id_etu !== false && !is_null($id_etu)) {
     //Connexion à la BDD
     $bdd = connectBdd($infoBdd);
     if ($bdd) {
-        $repo = new DTO\Etudiant($bdd);
+        $repo = new DAO\DAO_Etudiant($bdd);
 
         $etudiant = $repo->getById(intval($id_etu));
 
@@ -43,7 +43,7 @@ if($id_etu !== false && !is_null($id_etu)) {
             $mai_etu = $etudiant->getMaiEtu();
             $adr_etu = $etudiant->getAdrEtu();
             $cp_etu = $etudiant->getCpEtu();
-            $vil_etu = $etudiant->getVilleEtu();
+            $vil_etu = $etudiant->getVilEtu();
             $tel_etu = $etudiant->getTelEtu();
             $lib_clas = $etudiant->getLibClas();
             $lib_spe = $etudiant->getLibSpe();

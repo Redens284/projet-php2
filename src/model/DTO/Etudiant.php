@@ -226,7 +226,7 @@ class Etudiant
         $this->id_ent = $id_ent;
     }
 
-    public function __construct($data)
+    public function __construct(array $data)
     {
         $this->id_etu = $data['id_etu'];
         $this->nom_etu = $data['nom_etu'];

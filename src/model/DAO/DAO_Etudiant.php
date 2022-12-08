@@ -3,10 +3,11 @@
 namespace DAO;
 
 use DTO\Etudiant;
+use PDO;
 
 class DAO_Etudiant
 {
-private PDO $bdd;
+    private PDO $bdd;
 
     /**
      * @param PDO $bdd
