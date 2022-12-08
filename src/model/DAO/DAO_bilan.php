@@ -7,7 +7,6 @@ use DTO\Bilan;
 class DAO_bilan
 {
     private PDO $bdd;
-
     /**
      * @param PDO $bdd
      */

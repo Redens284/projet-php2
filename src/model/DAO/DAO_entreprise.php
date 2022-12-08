@@ -36,7 +36,6 @@ class DAO_entreprise
 
         // On prépare la rêquete
         $reqPrep = $this->bdd->prepare($query);
-
         $res = $reqPrep->execute([':id_ent' => $id]);
 
         if ($res !== FALSE) {
