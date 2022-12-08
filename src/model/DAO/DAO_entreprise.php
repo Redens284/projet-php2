@@ -5,7 +5,7 @@ use DTO\Entreprise;
 
 class DAO_entreprise
 {
-private PDO $bdd;
+    private PDO $bdd;
 
     /**
      * @param PDO $bdd
