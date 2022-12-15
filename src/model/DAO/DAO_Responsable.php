@@ -3,6 +3,7 @@
 namespace DAO;
 
 use DTO\Responsable;
+use PDO;
 
 class DAO_Responsable
 {
